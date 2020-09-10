@@ -63,6 +63,6 @@ if __name__ == '__main__':
 
         img_name = label_num + '_' + str(i) + '.png'
         img_path = os.path.join(o_dir, img_name)
-        imsave(img_path, img)
+        cv2.imwrite(img_path, img)
 
     print("test_batch loaded.")

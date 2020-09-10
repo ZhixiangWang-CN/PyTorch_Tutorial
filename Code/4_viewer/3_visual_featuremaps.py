@@ -12,8 +12,8 @@ from utils.utils import MyDataset, Net, normalize_invert
 from torch.utils.data import DataLoader
 
 
-vis_layer = 'conv1'
-log_dir = os.path.join("..", ".." "Result", "visual_featuremaps")
+vis_layer = 'conv2'
+log_dir = os.path.join("..", ".." ,"Result", "visual_featuremaps")
 txt_path = os.path.join("..", "..", "Data", "visual.txt")
 pretrained_path = os.path.join("..", "..", "Data", "net_params_72p.pkl")
 

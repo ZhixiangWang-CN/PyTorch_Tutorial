@@ -126,6 +126,7 @@ net.load_state_dict(net_state_dict)
 
 # 将fc3层的参数从原始网络参数中剔除
 ignored_params = list(map(id, net.fc3.parameters()))
+ignored_params.append(map(id, net.conv1.parameters()))
 base_params = filter(lambda p: id(p) not in ignored_params, net.parameters())
 
 # 为fc3层设置需要的学习率

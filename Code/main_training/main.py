@@ -23,7 +23,7 @@ classes_name = ['plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', '
 train_bs = 16
 valid_bs = 16
 lr_init = 0.001
-max_epoch = 1
+max_epoch = 100
 
 # log
 result_dir = os.path.join("..", "..", "Result")

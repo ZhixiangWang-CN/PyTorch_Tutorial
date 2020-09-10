@@ -30,7 +30,9 @@ for n_iter in range(100):
     writer.add_scalars(os.path.join("data", "scalar_group"), {"xsinx": n_iter * np.sin(n_iter),
                                              "xcosx": n_iter * np.cos(n_iter),
                                              "arctanx": np.arctan(n_iter)}, n_iter)
+
     x = torch.rand(32, 3, 64, 64)  # output from network
+    # writer.add_graph(resnet18, x)
     if n_iter % 10 == 0:
         x = vutils.make_grid(x, normalize=True, scale_each=True)
         writer.add_image('Image', x, n_iter)  # Tensor
